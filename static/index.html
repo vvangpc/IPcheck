@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专利格式校验工具</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>专利格式自动化校验</h1>
+            <p>阶段一：权利要求逻辑与全文一致性检查</p>
+        </header>
+
+        <div id="drop-zone" class="upload-section">
+            <i class="fas fa-file-word"></i>
+            <p>拖拽专利 .docx 文件到此处，或点击上传</p>
+            <input type="file" id="file-input" class="hidden" accept=".docx">
+        </div>
+
+        <div id="status"></div>
+
+        <div class="result-section" id="results">
+            <!-- 结果将在这里动态显示 -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
