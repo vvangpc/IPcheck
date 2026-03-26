@@ -16,11 +16,22 @@
 
         <div id="drop-zone" class="upload-section">
             <i class="fas fa-file-word"></i>
-            <p>拖拽专利 .docx 文件到此处，或点击上传</p>
+            <p id="file-name-display">拖拽专利 .docx 文件到此处，或点击上传</p>
             <input type="file" id="file-input" class="hidden" accept=".docx">
         </div>
 
+        <div class="action-area">
+            <button id="start-btn" class="start-btn" disabled>
+                <i class="fas fa-play"></i> 开始检查
+            </button>
+        </div>
+
         <div id="status"></div>
+
+        <div class="log-section">
+            <div class="section-title">运行日志</div>
+            <textarea id="log-area" readonly placeholder="等待开始检查..."></textarea>
+        </div>
 
         <div class="result-section" id="results">
             <!-- 结果将在这里动态显示 -->

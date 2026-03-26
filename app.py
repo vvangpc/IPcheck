@@ -7,7 +7,11 @@ from PySide6.QtWebEngineWidgets import QWebEngineView
 from PySide6.QtCore import QUrl
 from engine import PatentEngine
 
-app = Flask(__name__, static_folder='static', template_folder='static')
+# 获取当前脚本所在目录的绝对路径
+base_dir = os.path.dirname(os.path.abspath(__file__))
+static_dir = os.path.join(base_dir, 'static')
+
+app = Flask(__name__, static_folder=static_dir, template_folder=static_dir)
 
 # 禁用 Flask 的日志输出以保持后台干净
 import logging
